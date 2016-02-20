@@ -10,3 +10,6 @@
 [submodule "lib/Net35Essentials.Serializ"]
 	path = lib/Net35Essentials.Serializ
 	url = https://github.com/HelloKitty/.Net3.5Essentials.git
+[submodule "lib/Net35Essentials"]
+	path = lib/Net35Essentials
+	url = https://github.com/HelloKitty/.Net3.5Essentials.git

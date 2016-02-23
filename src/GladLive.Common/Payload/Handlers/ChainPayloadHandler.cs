@@ -49,7 +49,7 @@ namespace GladLive.Common
 		/// <param name="parameters">Parameters the message was sent with.</param>
 		/// <param name="peer">Peer that is involved with the message.</param>
 		/// <returns>True if the handler can handle the type of packet.</returns>
-		public bool TryProcessPayload(PacketPayload payload, IMessageParameters parameters, TPeerType peer)
+		public virtual bool TryProcessPayload(PacketPayload payload, IMessageParameters parameters, TPeerType peer)
 		{
 			bool result = false;
 

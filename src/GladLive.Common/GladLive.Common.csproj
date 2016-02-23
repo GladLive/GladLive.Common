@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\IStaticPacketParametersExtensions.cs" />
     <Compile Include="Payload\Handlers\ChainPayloadHandler.cs" />
     <Compile Include="Payload\Handlers\IPayloadHandler.cs" />
     <Compile Include="Payload\Handlers\IPayloadHandlerRegistry.cs" />

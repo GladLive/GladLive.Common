@@ -55,6 +55,9 @@
     <Compile Include="Payload\Handlers\IPayloadHandler.cs" />
     <Compile Include="Payload\Handlers\IPayloadHandlerRegistry.cs" />
     <Compile Include="Payload\Handlers\PayloadHandlerTypeAttribute.cs" />
+    <Compile Include="Payload\Metadata\IEventPayloadHandler.cs" />
+    <Compile Include="Payload\Metadata\IResponsePayloadHandler.cs" />
+    <Compile Include="Payload\Metadata\IRequestPayloadHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

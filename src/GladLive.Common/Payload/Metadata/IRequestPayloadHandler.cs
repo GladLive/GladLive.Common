@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GladLive.Common.Payload
+namespace GladLive.Common
 {
 	/// <summary>
-	/// IoC/Meta-data Market for Request handlers.
+	/// IoC/Meta-data Marker for Request handlers.
 	/// </summary>
 	/// <typeparam name="TPeerType">Type of the peer.</typeparam>
 	/// <typeparam name="TPayloadType">Type of the payload</typeparam>

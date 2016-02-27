@@ -23,6 +23,11 @@ namespace GladLive.Common
 			handlers = new List<IPayloadHandler<TPeerType>>();
 		}
 
+		public ChainPayloadHandler(IEnumerable<IPayloadHandler<TPeerType>> handlersToChain)
+		{
+			handlers = new List<IPayloadHandler<TPeerType>>(handlersToChain);
+		}
+
 		public bool Register<THandlerPeerType, TPayloadType>(IPayloadHandler<THandlerPeerType, TPayloadType> payloadHandler)
 			where THandlerPeerType : TPeerType
 			where TPayloadType : PacketPayload

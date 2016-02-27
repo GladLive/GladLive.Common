@@ -51,10 +51,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\IStaticPacketParametersExtensions.cs" />
-    <Compile Include="Payload\Handlers\ChainPayloadHandler.cs" />
+    <Compile Include="Payload\Handlers\Services\ResponsePayloadHandlerService.cs" />
+    <Compile Include="Payload\Handlers\Services\RequestPayloadHandlerService.cs" />
+    <Compile Include="Payload\Handlers\Strategies\ChainPayloadHandler.cs" />
     <Compile Include="Payload\Handlers\IPayloadHandler.cs" />
     <Compile Include="Payload\Handlers\IPayloadHandlerRegistry.cs" />
     <Compile Include="Payload\Handlers\PayloadHandlerTypeAttribute.cs" />
+    <Compile Include="Payload\Handlers\Services\EventPayloadHandlerService.cs" />
+    <Compile Include="Payload\Handlers\Services\IResponsePayloadHandlerService.cs" />
+    <Compile Include="Payload\Handlers\Services\IRequestPayloadHandlerService.cs" />
+    <Compile Include="Payload\Handlers\Services\IEventPayloadHandlerService.cs" />
+    <Compile Include="Payload\Handlers\Strategies\IPayloadHandlerStrategy.cs" />
     <Compile Include="Payload\Metadata\IEventPayloadHandler.cs" />
     <Compile Include="Payload\Metadata\IResponsePayloadHandler.cs" />
     <Compile Include="Payload\Metadata\IRequestPayloadHandler.cs" />

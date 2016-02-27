@@ -6,10 +6,15 @@ using System.Text;
 
 namespace GladLive.Common
 {
+	/// <summary>
+	/// Request payload handler service that handles events based on the
+	/// strategy provided.
+	/// </summary>
+	/// <typeparam name="TSessionType">Type of the session</typeparam>
 	public class RequestPayloadHandlerService<TSessionType> : IRequestPayloadHandlerService<TSessionType>
 		where TSessionType : INetPeer
 	{
-		private IPayloadHandlerStrategy<TSessionType> handlerStrat;
+		private IPayloadHandlerStrategy<TSessionType> handlerStrat { get; }
 
 		public RequestPayloadHandlerService(IPayloadHandlerStrategy<TSessionType> strat)
 		{

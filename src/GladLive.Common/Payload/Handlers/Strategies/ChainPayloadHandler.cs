@@ -7,32 +7,32 @@ using System.Text;
 namespace GladLive.Common
 {
 	/// <summary>
-	/// Provides chain of responsibility style semantics for payload handling.
+	/// Provides chain of responsibility semantics as a strategy for payload handling.
 	/// </summary>
-	/// <typeparam name="TPeerType">Peer type to handle.</typeparam>
-	public class ChainPayloadHandler<TPeerType> : IPayloadHandler<TPeerType>, IPayloadHandlerRegistry<TPeerType>
-		where TPeerType : INetPeer
+	/// <typeparam name="TSessionType">Session type to handle.</typeparam>
+	public class ChainPayloadHandler<TSessionType> : IPayloadHandlerStrategy<TSessionType>, IPayloadHandlerRegistry<TSessionType>
+		where TSessionType : INetPeer
 	{
 		/// <summary>
 		/// Collection of handles to chain over.
 		/// </summary>
-		private IList<IPayloadHandler<TPeerType>> handlers;
+		private IList<IPayloadHandler<TSessionType>> handlers;
 
 		public ChainPayloadHandler()
 		{
-			handlers = new List<IPayloadHandler<TPeerType>>();
+			handlers = new List<IPayloadHandler<TSessionType>>();
 		}
 
-		public ChainPayloadHandler(IEnumerable<IPayloadHandler<TPeerType>> handlersToChain)
+		public ChainPayloadHandler(IEnumerable<IPayloadHandler<TSessionType>> handlersToChain)
 		{
-			handlers = new List<IPayloadHandler<TPeerType>>(handlersToChain);
+			handlers = new List<IPayloadHandler<TSessionType>>(handlersToChain);
 		}
 
 		public bool Register<THandlerPeerType, TPayloadType>(IPayloadHandler<THandlerPeerType, TPayloadType> payloadHandler)
-			where THandlerPeerType : TPeerType
+			where THandlerPeerType : TSessionType
 			where TPayloadType : PacketPayload
 		{
-			IPayloadHandler<TPeerType> h = payloadHandler as IPayloadHandler<TPeerType>;
+			IPayloadHandler<TSessionType> h = payloadHandler as IPayloadHandler<TSessionType>;
 
 			//Adds the handler to the collection
 			//In the future we can do fancier things like checking to see if it has already been registered
@@ -54,13 +54,17 @@ namespace GladLive.Common
 		/// <param name="parameters">Parameters the message was sent with.</param>
 		/// <param name="peer">Peer that is involved with the message.</param>
 		/// <returns>True if the handler can handle the type of packet.</returns>
-		public virtual bool TryProcessPayload(PacketPayload payload, IMessageParameters parameters, TPeerType peer)
+		public virtual bool TryProcessPayload(PacketPayload payload, IMessageParameters parameters, TSessionType peer)
 		{
 			bool result = false;
 
-			foreach(IPayloadHandler<TPeerType> h in handlers)
+			foreach(IPayloadHandler<TSessionType> h in handlers)
 			{
 				result = h.TryProcessPayload(payload, parameters, peer) || result;
+
+				//Added consumption to the chain making the payloads handleable by only a single handler
+				if (result)
+					return true;
 			}
 
 			return result;

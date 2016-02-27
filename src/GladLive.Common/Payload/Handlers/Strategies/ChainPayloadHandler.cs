@@ -16,7 +16,7 @@ namespace GladLive.Common
 		/// <summary>
 		/// Collection of handles to chain over.
 		/// </summary>
-		private IList<IPayloadHandler<TSessionType>> handlers;
+		private IList<IPayloadHandler<TSessionType>> handlers { get; }
 
 		public ChainPayloadHandler()
 		{

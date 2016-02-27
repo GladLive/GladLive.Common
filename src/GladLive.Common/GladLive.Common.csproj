@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\IStaticPacketParametersExtensions.cs" />
+    <Compile Include="Payload\Handlers\Services\MultipleChainResponsbilityPayloadHandlerStrategy.cs" />
     <Compile Include="Payload\Handlers\Services\ResponsePayloadHandlerService.cs" />
     <Compile Include="Payload\Handlers\Services\RequestPayloadHandlerService.cs" />
     <Compile Include="Payload\Handlers\Strategies\ChainPayloadHandler.cs" />

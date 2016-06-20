@@ -1,0 +1,2 @@
+mono ./testrunner/NUnit.Console.3.0.1/tools/nunit3-console.exe ./GladLive.Common.Payloads.Tests/bin/Debug/GladLive.Common.Payloads.Tests.dll
+mono ./testrunner/NUnit.Console.3.0.1/tools/nunit3-console.exe ./GladLive.Common.Tests/bin/Debug/GladLive.Common.Tests.dll

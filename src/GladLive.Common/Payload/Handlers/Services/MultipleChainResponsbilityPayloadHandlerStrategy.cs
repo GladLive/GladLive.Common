@@ -13,6 +13,9 @@ namespace GladLive.Common
 	public class MultipleChainResponsbilityPayloadHandlerStrategy<TSessionType> : IPayloadHandlerStrategy<TSessionType>
 		where TSessionType : INetPeer
 	{
+		/// <summary>
+		/// Combined collection of enumerable strategies for handling <see cref="PacketPayload"/>s.
+		/// </summary>
 		private IEnumerable<IPayloadHandlerStrategy<TSessionType>> strategyChain { get; }
 
 		public MultipleChainResponsbilityPayloadHandlerStrategy(IEnumerable<IPayloadHandlerStrategy<TSessionType>> strategies)
@@ -25,6 +28,13 @@ namespace GladLive.Common
 			strategyChain = strategies;
 		}
 
+		/// <summary>
+		/// Attempts to handle the <see cref="PacketPayload"/>.
+		/// </summary>
+		/// <param name="payload">Payload instance.</param>
+		/// <param name="parameters">Parameters the message was sent with.</param>
+		/// <param name="peer">Peer that is involved with the message.</param>
+		/// <returns>True if the handler can handle the type of packet.</returns>
 		public bool TryProcessPayload(PacketPayload payload, IMessageParameters parameters, TSessionType peer)
 		{
 			//Defer the request to each strat and if one handles it properly then we stop chaining

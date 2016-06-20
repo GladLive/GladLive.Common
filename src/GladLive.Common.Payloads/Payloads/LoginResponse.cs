@@ -7,6 +7,10 @@ using System.Text;
 
 namespace GladLive.Common.Payloads.Payloads
 {
+	/// <summary>
+	/// Packet payload used to request a login to a server.
+	/// Includes serializable data such as <see cref="LoginResponseCode"/>.
+	/// </summary>
 	[GladNetSerializationContract]
 	[GladNetSerializationInclude((int)PayloadNumber.LoginResponse, typeof(PacketPayload), false)] //I don't really like this design. I wish Attributes could have generics and could compute things at compile time.
 	public class LoginResponse : PacketPayload

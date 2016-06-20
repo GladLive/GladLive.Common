@@ -11,7 +11,7 @@ namespace GladLive.Common.Payloads
 	//Reference: https://github.com/GladLive/GladLive.Server.Common/blob/master/src/GladLive.Server.Common/Payload/PayloadNumber.cs
 	public enum PayloadNumber : int
 	{
-		LoginRequest = 0,
-		LoginResponse = 1,
+		LoginRequest = 1,
+		LoginResponse = 2,
 	}
 }

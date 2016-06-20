@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GladLive.Common.Tests", "te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GladLive.Common.Payloads", "src\GladLive.Common.Payloads\GladLive.Common.Payloads.csproj", "{AD7F4685-B652-4272-8F63-AD264D836EFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GladLive.Common.Payloads.Tests", "tests\GladLive.Common.Payloads.Tests\GladLive.Common.Payloads.Tests.csproj", "{17EF498E-4D6E-4154-8CFE-50BB8BAEB5D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{AD7F4685-B652-4272-8F63-AD264D836EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD7F4685-B652-4272-8F63-AD264D836EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD7F4685-B652-4272-8F63-AD264D836EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17EF498E-4D6E-4154-8CFE-50BB8BAEB5D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17EF498E-4D6E-4154-8CFE-50BB8BAEB5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17EF498E-4D6E-4154-8CFE-50BB8BAEB5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17EF498E-4D6E-4154-8CFE-50BB8BAEB5D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +45,6 @@ Global
 		{7D640AB5-7644-48BC-A2B7-E6AA36FED2A4} = {33F4AF6D-0B4D-4257-AA5B-03942A6AB0FF}
 		{C4D4AB70-6398-4F00-8F53-A7C3E7646D16} = {F89F2ECC-151A-4C3E-A7C6-24A97189ADE7}
 		{AD7F4685-B652-4272-8F63-AD264D836EFE} = {33F4AF6D-0B4D-4257-AA5B-03942A6AB0FF}
+		{17EF498E-4D6E-4154-8CFE-50BB8BAEB5D9} = {F89F2ECC-151A-4C3E-A7C6-24A97189ADE7}
 	EndGlobalSection
 EndGlobal

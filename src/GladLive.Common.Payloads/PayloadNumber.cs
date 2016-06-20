@@ -12,5 +12,6 @@ namespace GladLive.Common.Payloads
 	public enum PayloadNumber : int
 	{
 		LoginRequest = 0,
+		LoginResponse = 1,
 	}
 }

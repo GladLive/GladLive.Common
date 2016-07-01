@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace GladLive.Common.Payloads.Payloads
+namespace GladLive.Common.Payloads
 {
 	/// <summary>
 	/// Packet payload used to request a login to a server.

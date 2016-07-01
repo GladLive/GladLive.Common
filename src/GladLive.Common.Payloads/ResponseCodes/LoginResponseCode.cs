@@ -34,7 +34,7 @@ namespace GladLive.Common.Payloads
 		Failed,
 
 		/// <summary>
-		/// Indicates that the login failed due to the authentication server being unreachable or unavailable.
+		/// Indicates that the login failed due to the authentication server being unreachable or unavailabl
 		/// </summary>
 		AuthServerUnavailable,
 	}

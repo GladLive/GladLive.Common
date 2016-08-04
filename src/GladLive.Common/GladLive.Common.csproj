@@ -38,16 +38,28 @@
       <HintPath>..\..\packages\Common.Logging.Core.3.3.1\lib\net35\Common.Logging.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GladNet.Common, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GladNet.Common.1.0.15\lib\net35\GladNet.Common.dll</HintPath>
+    <Reference Include="Easyception, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Easyception.2.0.0\lib\net35\Easyception.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GladNet.Payload, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GladNet.Payload.1.0.15\lib\net35\GladNet.Payload.dll</HintPath>
+    <Reference Include="GladNet.Common, Version=2.0.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GladNet.Common.2.0.14\lib\net35\GladNet.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="GladNet.Serializer, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GladNet.Serializer.1.0.15\lib\net35\GladNet.Serializer.dll</HintPath>
+    <Reference Include="GladNet.Encryption, Version=2.0.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GladNet.Encryption.2.0.14\lib\net35\GladNet.Encryption.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GladNet.Message, Version=2.0.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GladNet.Message.2.0.14\lib\net35\GladNet.Message.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GladNet.Payload, Version=2.0.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GladNet.Payload.2.0.14\lib\net35\GladNet.Payload.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GladNet.Serializer, Version=2.0.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GladNet.Serializer.2.0.14\lib\net35\GladNet.Serializer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -59,21 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\IStaticPacketParametersExtensions.cs" />
-    <Compile Include="Payload\Handlers\Services\MultipleChainResponsbilityPayloadHandlerStrategy.cs" />
-    <Compile Include="Payload\Handlers\Services\ResponsePayloadHandlerService.cs" />
-    <Compile Include="Payload\Handlers\Services\RequestPayloadHandlerService.cs" />
-    <Compile Include="Payload\Handlers\Strategies\ChainPayloadHandler.cs" />
-    <Compile Include="Payload\Handlers\IPayloadHandler.cs" />
-    <Compile Include="Payload\Handlers\IPayloadHandlerRegistry.cs" />
-    <Compile Include="Payload\Handlers\PayloadHandlerTypeAttribute.cs" />
-    <Compile Include="Payload\Handlers\Services\EventPayloadHandlerService.cs" />
-    <Compile Include="Payload\Handlers\Services\IResponsePayloadHandlerService.cs" />
-    <Compile Include="Payload\Handlers\Services\IRequestPayloadHandlerService.cs" />
-    <Compile Include="Payload\Handlers\Services\IEventPayloadHandlerService.cs" />
-    <Compile Include="Payload\Handlers\Strategies\IPayloadHandlerStrategy.cs" />
-    <Compile Include="Payload\Metadata\IEventPayloadHandler.cs" />
-    <Compile Include="Payload\Metadata\IResponsePayloadHandler.cs" />
-    <Compile Include="Payload\Metadata\IRequestPayloadHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

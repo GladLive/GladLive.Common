@@ -10,7 +10,6 @@ namespace GladLive.Common.Payloads
 	/// <summary>
 	/// Indicates the result of a <see cref="LoginRequest"/>.
 	/// </summary>
-	[Serializable]
 	public enum LoginResponseCode : byte //even though this causes boxing in some cases it reduces bandwidth
 	{
 		/// <summary>

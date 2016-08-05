@@ -1,5 +1,6 @@
 ﻿using GladLive.Common.Payloads;
 using GladNet.Common;
+using GladNet.Payload;
 using GladNet.Serializer;
 using NUnit.Framework;
 using System;

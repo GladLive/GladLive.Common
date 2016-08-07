@@ -1,1 +1,1 @@
-%MsBuildExe% GladLive.Common.sln /p:Configuration=Release
+msbuild GladLive.Common.sln /p:Configuration=Release
